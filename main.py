@@ -8,7 +8,7 @@ import psycopg2.errors
 from telegram.ext import ContextTypes
 
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = 8575573468
+ADMIN_ID = 8717440042
 
 # ===== RATE SAFETY LIMITS =====
 MIN_BUY_RATE = 115  # 115 RSD za 1 EUR
