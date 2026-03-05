@@ -581,8 +581,12 @@ async def admin_location_toggle_handler(update: Update, ctx):
 
 
 async def admin_help(update, ctx):
-    if not is_admin(update.effective_user.id):
-        return
+    uid = update.effective_user.id
+
+    # permission check
+    if not is_admin(uid):
+        return await update.message.reply_text("❌ Nemate prava pristupa." + admin_contact_text(), parse_mode="HTML")
+        
     msg = """
         Dostupne komande:
 
